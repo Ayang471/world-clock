@@ -59,4 +59,6 @@ margin: 0 auto;
 footer{
     margin-top: 25px;
      text-align: center;
+     font-size: 18px;
+     color: rgba(0,0,0,0.6);
 }
