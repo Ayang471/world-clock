@@ -1,16 +1,16 @@
 //approach 1 function
- function updatedLATime (){
-     let losAngelesElement = document.querySelector("#los-angeles")
-     let losAngelesDateElement = losAngelesElement.querySelector(".date")
-     let losAngelesTimeElement = losAngelesElement.querySelector(".time")
-     let losAngelesTime = moment().tz("America/Los_Angeles");
+ function updatedNewYorkTime (){
+     let newYorkElement = document.querySelector("#new_york")
+     let newYorkDateElement = newYorkElement.querySelector(".date")
+     let newYorkTimeElement = newYorkElement.querySelector(".time")
+     let newYorkTime = moment().tz("America/Los_Angeles");
 
-     losAngelesDateElement.innerHTML = losAngelesTime.format("dddd Do MMMM")
-     losAngelesTimeElement.innerHTML = losAngelesTime.format("h:mm:ss [<small>] A [</small>]")
+     newYorkDateElement.innerHTML = newYorkTime.format("dddd Do MMMM")
+     newYorkTimeElement.innerHTML = newYorkTime.format("h:mm:ss [<small>] A [</small>]")
 
  }
 
- updatedLATime();
+ updatedNewYorkTime();
 
 // approach 2
 
@@ -28,7 +28,10 @@
 
 function updateCity(event){
   let cityTimeZone = event.target.value;
-  let cityName = cityTimeZone.replace("_","").split("/")[1];
+    if (cityTimeZone === "current")  {
+        cityTimeZone = moment.tz.guess();
+ }
+  let cityName = cityTimeZone.replace("_"," ").split("/")[1];
   //console.log(cityTimeZone)
   let cityTime = moment().tz(cityTimeZone);
   //console.log(cityTime.format("dddd Do MMMM"))
@@ -46,5 +49,4 @@ let citiesElement = document.querySelector("#cities")
 
 let selectedCities = document.querySelector("#city")
 selectedCities.addEventListener("change", updateCity)
-
 
