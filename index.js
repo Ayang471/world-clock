@@ -10,6 +10,8 @@
 
  }
 
+ updatedLATime();
+
 // approach 2
 
  setInterval(function () {
@@ -30,7 +32,7 @@ function updateCity(event){
   //console.log(cityTimeZone)
   let cityTime = moment().tz(cityTimeZone);
   //console.log(cityTime.format("dddd Do MMMM"))
-    let citiesElement = document.querySelector("#cities")
+let citiesElement = document.querySelector("#cities")
   citiesElement.innerHTML = `
             <div class="city">
           <div>
