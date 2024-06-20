@@ -41,19 +41,19 @@ select{
 }
 
 .date{
-    opacity:0.7;
+    opacity:0.6;
     margin-top:6px;
 }
 
 .time{
-   font-size: 32px;
+   font-size: 36px;
    font-weight: bold;
 }
 
 .time small{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 36px;
-    vertical-align: middle;
+    vertical-align: end;
 }
 
 footer{
