@@ -5,7 +5,7 @@
      let newYorkTimeElement = newYorkElement.querySelector(".time")
      let newYorkTime = moment().tz("America/Los_Angeles");
 
-     newYorkDateElement.innerHTML = newYorkTime.format("dddd Do MMMM")
+     newYorkDateElement.innerHTML = newYorkTime.format("dddd Do MMMM, YYYY")
      newYorkTimeElement.innerHTML = newYorkTime.format("h:mm:ss [<small>] A [</small>]")
 
  }
@@ -18,7 +18,7 @@ function updatedCostaRicaTime() {
   let costaRicaTimeElement = costaRicaElement.querySelector(".time")
   let costaRicaTime = moment().tz("America/Costa_Rica");
 
-  costaRicaDateElement.innerHTML = costaRicaTime.format("dddd Do MMMM")
+  costaRicaDateElement.innerHTML = costaRicaTime.format("dddd Do MMMM, YYYY")
   costaRicaTimeElement.innerHTML = costaRicaTime.format("h:mm:ss [<small>] A [</small>]")
 
 }
@@ -33,7 +33,7 @@ updatedCostaRicaTime();
      let sydneyTimeElement = sydneyElement.querySelector(".time");
      let sydneyTime = moment().tz("Australia/Sydney");
 
-     sydneyDateElement.innerHTML = sydneyTime.format("dddd Do MMMM")
+     sydneyDateElement.innerHTML = sydneyTime.format("dddd Do MMMM, YYYY")
      sydneyTimeElement.innerHTML = sydneyTime.format("h:mm:ss [<small>] A [</small>]")
  }, 1000)
 
@@ -44,7 +44,7 @@ setInterval(function () {
   let shanghaiTimeElement = shanghaiElement.querySelector(".time");
   let shanghaiTime = moment().tz("Asia/Shanghai");
 
-  shanghaiDateElement.innerHTML = shanghaiTime.format("dddd Do MMMM")
+  shanghaiDateElement.innerHTML = shanghaiTime.format("dddd Do MMMM, YYYY")
   shanghaiTimeElement.innerHTML = shanghaiTime.format("h:mm:ss [<small>] A [</small>]")
 }, 1000)
 
